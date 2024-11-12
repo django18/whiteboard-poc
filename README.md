@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Whiteboard POC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+The Whiteboard POC (Proof of Concept) is a simple interactive whiteboard application that supports markdown rendering and real-time updates. Users can write, append text, and annotate specific words or phrases with highlights. The application is built using React, TypeScript, and Tailwind CSS, and utilizes Framer Motion for animations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Markdown Support**: Render markdown content dynamically.
+- **Interactive Elements**: Users can write and append text to the whiteboard.
+- **Annotations**: Highlight specific words or phrases in the text.
+- **Smooth Scrolling**: Automatically scrolls to the bottom of the container when new content is added.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- React Markdown
+- React Rough Notation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/whiteboard-poc.git
+   cd whiteboard-poc
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+To start the development server, run:
+
+```bash
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+This will start the application on `http://localhost:3000` (or another port if 3000 is in use).
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Usage
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+- Click on the "Write" button to start writing text on the whiteboard.
+- Click on the "Append" button to add more text.
+- Click on the "Annotate" button to highlight specific words or phrases in the text.
+- The view will automatically scroll to the bottom as new content is added.
+
+### Building for Production
+
+To build the application for production, run:
+
+```bash
+npm run build
 ```
+
+This will create an optimized build in the `dist` directory.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
