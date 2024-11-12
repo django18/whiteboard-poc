@@ -103,7 +103,7 @@ export default function Whiteboard() {
         parts.push(
           <ReactMarkdown
             key={`text-${idx}`}
-            components={{ p: ({ node, children }) => <span>{children}</span> }}
+            components={{ p: ({ children }) => <span>{children}</span> }}
           >
             {content.substring(lastIndex, anno.startIndex)}
           </ReactMarkdown>
@@ -121,7 +121,7 @@ export default function Whiteboard() {
         >
           <ReactMarkdown
             components={{
-              p: ({ node, children }) => (
+              p: ({ children }) => (
                 <span style={{ margin: "0 4px" }}>{children}</span>
               ),
             }}
@@ -138,7 +138,7 @@ export default function Whiteboard() {
       parts.push(
         <ReactMarkdown
           key="remaining-text"
-          components={{ p: ({ node, children }) => <span>{children}</span> }}
+          components={{ p: ({ children }) => <span>{children}</span> }}
         >
           {content.substring(lastIndex)}
         </ReactMarkdown>
